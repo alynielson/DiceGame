@@ -154,7 +154,6 @@ function checkIfMonsterStrengthExists() {
     else {
         return true;
     }
-
 }
 
 function getValueOfMonsterStrength() {
@@ -238,10 +237,7 @@ function fightMonster(diceSides,rollResult) {
         document.getElementById("info-next-step").innerText = "Now roll the d20 to get the strength of your next monster!"; 
         document.getElementById("current-action").value = "";
         document.getElementById("current-action").innerText = "";
-        
-        
         document.getElementById("next-step").innerText = "";
-        
         document.getElementById("total-score").innerText = "Your score is " + currentScore + ".";
         document.getElementById("info-last-step").innerText = "The sum of your rolls was " + sum + ", while the monster's strength was " + monsterStrength +". " + addToScore + " was added to your score.";
         checkScore(currentScore,kryptonite, luckyNumber);
@@ -282,7 +278,6 @@ function decideWhatToDoNext(diceSides, rollResult) {
 function rollForKryptonite(diceSides, rollResult) {
     document.getElementById("next-step").innerText = "";
     if (diceSides === 10) {
-        
         let addToScore = 0 - rollResult;
         let currentScore = changeCurrentScore(addToScore);
         let kryptonite = getKryptonite();
