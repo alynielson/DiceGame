@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="DiceGameStylePage.css">
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-sm-1">
+                <button class="dice-button" id="4" onclick="clickDiceButton(this)">d4</button>
+            </div>
+            <div class="col-sm-1">
+                <button class="dice-button" id="6" onclick="clickDiceButton(this)">d6</button>
+            </div>
+            <div class="col-sm-1">
+                <button class="dice-button" id="8" onclick="clickDiceButton(this)">d8</button>
+            </div>
+            <div class="col-sm-1">
+                <button class="dice-button active" id="10" onclick="clickDiceButton(this)">d10</button>
+            </div>
+            <div class="col-sm-1">
+                <button class="dice-button" id="12" onclick="clickDiceButton(this)">d12</button>
+            </div>
+            <div class="col-sm-1">
+                <button class="dice-button" id="20" onclick="clickDiceButton(this)">d20</button>
+            </div>
+            <div class="col-sm-6">
+                <center>
+                    <h1 id="total-score"></h1>
+                </center>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <center>
+                    <button class="roll-button" onclick="rollDie()">Roll</button>
+                </center>
+            </div>
+            <div class="col-sm-3"> 
+                <center>
+                    <p id="roll-result"></p>
+                </center>
+            </div>
+            <div class="col-sm-6">
+                <center>
+                    <h4 id="lucky-number"></h4>
+                    <h4 id="kryptonite"></h4>
+                </center>
+            </div>   
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <center>
+                    <p id="result-message"></p>
+                </center>
+            </div>
+            <div class="col-sm-6">
+                <p> </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Monster Game</h3>
+                <p class="rules">Rules:</p>
+                <ol class="rules">
+                    <li>The object of the game is to get 100 points exactly.</li>
+                    <li>If you go over 100 points, your score will automatically be dropped by subtracting from 100 the amount you went over 100.</li>
+                    <li>First, get your lucky number. Every time your score ends in your lucky number, you get to roll the d10 and add the amount you roll to your score.</li>
+                    <li>Next, get your kryptonite. Every time your score ends in your kryptonite, you have to roll the d10 and subtract the amount you roll from your score.</li>
+                    <li>Next, you'll start fighting monsters. Before fighting a monster, you have to roll the d20. The number you roll is the strength of the monster.</li>
+                    <li>You get three rolls of any dice combination you would like. The goal is for the sum of the rolls to equal the strength of the monster. You could roll the same die three times if you wanted.</li>
+                    <li>If the sum of the rolls matches the monster's strength, you defeated the monster, and you get the monster's strength added to your score.</li>
+                    <li>If the sum is more than the monster's strength, you expended too much energy. Your score will only increase by the monster's strength minus the amount you were over.</li>
+                    <li>If the sum is less than the monster's strength, you lost to the monster, and your score goes down by the monster's strength.</li>
+                    <li>If the monster's strength is less than 3, you automatically defeat them.</li>
+                </ol>
+            </div>
+            <div class="col-sm-6">
+                <center>
+                    <b><p id="last-step"></p></b>
+                    <p id="info-last-step"></p>
+                    <p id="next-step">To start, roll the d10 to get your lucky number.</p>
+                    <p id="current-action"></p>
+                    <p id="info-next-step">If your score ever ends in this number, you get to roll for bonus points! 10 means 0.</p>
+                    <h5 id="roll-result1"></h5>
+                    <h5 id="roll-result2"></h5>
+                    <h5 id="roll-result3"></h5>
+                    <h5 id="roll-sum"></h5>
+                    <h5 id="monster-strength"></h5>
+                </center>
+            </div>
+        </div>
+        <script src="diceGame.js"></script>
+    </body>
+</html>

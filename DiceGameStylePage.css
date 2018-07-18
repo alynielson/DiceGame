@@ -1,0 +1,59 @@
+.roll-button {
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    padding: 15px 32px;
+    background-color: black;
+    color: aqua;
+    font-family: "Segoe UI";
+    font-size: 18px;
+    width: 8em;
+    margin:3px;
+}
+
+
+
+#roll-result {
+    font-size: 24px;
+}
+
+.dice-button {
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    padding: 15px 32px;
+    background-color: black;
+    color: hotpink;
+    font-family: "Segoe UI";
+    font-size: 16px; 
+    width: 6em;
+    margin: 3px;
+}
+
+.active {
+    background-color: peru;
+}
+
+.rules {
+    font-size: 12px;
+    font-family: "Segoe UI";
+}
+
+
+
+button:hover {
+    background-color: gray;
+}
+
+#last-step {
+    color: red;
+    font-size: 20px;
+    font-family: "Segoe UI";
+}
+
+#current-action {
+    color: rgb(253, 55, 154);
+    font-family: "Segoe UI";
+    font-size: 22px;
+}
+
