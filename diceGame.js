@@ -130,6 +130,9 @@ function getCurrentAction() {
     else if (document.getElementById("current-action").value === 3) {
         currentAction = 3;
     }
+    else if (document.getElementById("current-action").value === 4) {
+        currentAction = 4;
+    }
     return currentAction;
 }
 
@@ -272,6 +275,9 @@ function decideWhatToDoNext(diceSides, rollResult) {
         else if (currentAction === 3) {
             rollForLuckyNumber(diceSides, rollResult);
         }
+        else if (currentAction === 4) {
+            location.reload();
+        }
     }
 }
 
@@ -339,7 +345,9 @@ function checkScore(currentScore,kryptonite,luckyNumber) {
         checkScore(currentScore,kryptonite,luckyNumber);
     }
     else if (currentScore === 100) {
-        document.getElementById("info-next-step").innerText = "You won the game!";
+        document.getElementById("info-next-step").innerText = "Click Roll again to start a new game.";
+        document.getElementById("current-action").value = 4;
+        document.getElementById("win-message").innerText = "You won the game!";
     }
     else {
         let scoreAsString = currentScore.toString();
